@@ -1,19 +1,17 @@
-<div>
+<nav>
 
-  <h3>
-    <a
-      [routerLink]="['/login']">
-      login
-    </a>
-    <a
-      [routerLink]="['/logout']">
-      register
-    </a>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/login']">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/logout']">Logout</a>
+    </li>
+  </ul>
 
-  </h3>
-
-  <!-- . . . -->
-
-</div>
+</nav>
 
 <router-outlet></router-outlet>
