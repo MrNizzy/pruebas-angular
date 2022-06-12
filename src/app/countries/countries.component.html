@@ -1,0 +1,42 @@
+<main class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Countries</li>
+    </ol>
+  </nav>
+  <input
+    class="form-control mb-3"
+    type="text"
+    [(ngModel)]="countryName"
+    placeholder="Buscar país"
+  />
+  <div class="row">
+    <div
+      class="col-sm-3"
+      *ngFor="let country of countries | filter: countryName"
+    >
+      <div class="card" style="width: 15rem;">
+        <img src="{{ country.flags.svg }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ country.name.common }}</h5>
+          <p class="card-text">
+            <b>Nombre oficial:</b>
+            {{ country.name.official }}
+          </p>
+          <p class="card-text">
+            <b>Region:</b>
+            {{ country.region }}
+          </p>
+          <a
+            href="{{ country.maps.googleMaps }}"
+            target="_blank"
+            class="btn btn-danger"
+          >
+            Ver en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
