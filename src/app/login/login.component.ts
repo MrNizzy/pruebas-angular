@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  title = "Titulo desde una variable del componente login mediante interpolación";
+
   constructor() { }
 
   ngOnInit(): void {

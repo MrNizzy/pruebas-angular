@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
+  public texto: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public showAlert(): void {
+    alert(`Has escrito: ${this.texto}`);
   }
 
 }

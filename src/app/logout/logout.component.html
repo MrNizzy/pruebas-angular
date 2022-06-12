@@ -5,5 +5,10 @@
           <li class="breadcrumb-item active" aria-current="page">Logout</li>
         </ol>
       </nav>
-    <h1>logout works!</h1>
+    <h4>Escribe algo:</h4>
+    <input class="form-control mb-2" type="text" [(ngModel)]="texto">
+
+    <p>{{texto}}</p>
+
+    <button class="btn btn-primary" type="button" (click)="showAlert()">Mostrar texto en alerta</button>
 </main>
